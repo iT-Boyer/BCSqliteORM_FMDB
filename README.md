@@ -162,6 +162,8 @@ OR with delete condition
     
 ```
 
+architecture
+![输入图片说明](http://static.oschina.net/uploads/space/2015/0910/214048_SIq6_173728.jpg "在这里输入图片标题")
 ## License
 
 The license for BCSqliteORM is contained in the "License.txt" file.

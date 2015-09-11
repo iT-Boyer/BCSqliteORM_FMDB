@@ -44,7 +44,7 @@ make your model entity implement BCORMEntityProtocol protocol
 @end
 ```
 it will build a table like this.or just make a mapping 
-![demo screenshot](https://github.com/helloclq/BCSqliteORM_FMDB/blob/master/Screen%20Shot%202015-09-10%20at%2008.21.25.png)
+ ![输入图片说明](http://git.oschina.net/BlockCheng/BCSqliteORM_FMDB/blob/master/Screen%20Shot%202015-09-10%20at%2008.21.25.png?dir=0&filepath=Screen+Shot+2015-09-10+at+08.21.25.png&oid=570d614fca9b7fa20f67ade27f67e67d88cb142b&sha=dbbbe23d2082d50aedbd683d5f3afb9ce534da79 "在这里输入图片标题")
 
 it will build a sql like this:
 ``` objectivec

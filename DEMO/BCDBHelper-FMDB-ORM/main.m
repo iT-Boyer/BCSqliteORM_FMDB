@@ -105,6 +105,7 @@ int main(int argc, const char * argv[]) {
         for (int i  = 0 ;i <  100; i ++) {
             student.studentNum = 421125 + i ;
             student.classId = i % 10 + 1;
+            student.age = i;
             student.studentName = [NSString stringWithFormat:@"student_%d_%@",i,[NSDate date]];
              [helper save:student];
         }
@@ -117,7 +118,7 @@ int main(int argc, const char * argv[]) {
         queryParam.selectionArgs = @[@1,@421125];
         queryParam.orderBy = @" studentNum  asc";
         id entity  = [helper queryEntityByCondition:queryParam];
-        NSLog(@"entity:----%@",entity);
+        NSLog(@"query ===== entity:----%@",entity);
 
         //another way to query
         entity  = [helper queryEntityByCondition:BCQueryParameterMake([StudentEntity class], @[@"age",@"classId",@"score",@"studentName",@"studentNum"], @"classId = ? and studentNum=?", @[@1,@421128], nil,@" studentNum  asc",  -1, -1)];
@@ -125,12 +126,12 @@ int main(int argc, const char * argv[]) {
 
         //query many models
         queryParam.propertyArray = nil;
-        queryParam.selection = @"classId = ?";
-        queryParam.selectionArgs = @[@1];
+        queryParam.selection = @"classId = ? and age=?";
+        queryParam.selectionArgs = @[@1,[NSNumber numberWithInt:5]];
         NSArray* entities  = [helper queryEntitiesByCondition:queryParam];
          NSLog(@"entities:----%@",entities);
         //query by condition
-        entities  = [helper queryEntitiesByCondition:BCQueryParameterMake([ClassEntity class], nil, @"classId = ?", @[@1], nil, nil, -1, -1)];
+        entities  = [helper queryEntitiesByCondition:BCQueryParameterMake([ClassEntity class], nil, nil, nil, nil, nil, -1, -1)];
          NSLog(@"entities:----%@",entities);
 
         //update a model

@@ -44,7 +44,7 @@ make your model entity implement BCORMEntityProtocol protocol
 @end
 ```
 it will build a table like this.or just make a mapping 
-![输入图片说明](https://github.com/helloclq/BCSqliteORM_FMDB/raw/master/Screen%20Shot%202015-09-10%20at%2008.21.25.png "在这里输入图片标题")
+![demo screenshot](创建表结构.png)
 
 it will build a sql like this:
 ``` objectivec
@@ -163,7 +163,7 @@ OR with delete condition
 ```
 
 architecture
-![输入图片说明](http://static.oschina.net/uploads/space/2015/0910/214048_SIq6_173728.jpg "在这里输入图片标题")
+![输入图片说明](类图.png)
 ## License
 
 The license for BCSqliteORM is contained in the "License.txt" file.
